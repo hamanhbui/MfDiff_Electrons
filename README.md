@@ -1,4 +1,4 @@
-# mfdiff_electrons
+# MfDiff_Electrons
 This is code for "Application to compare 2 revisions of Mendix including Microflow and DomainModel"  by using ReactJS.
 
 # Overview
