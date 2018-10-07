@@ -1,0 +1,1536 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial;
+    padding-top: 70px;
+    color: #393939;
+    margin-bottom: 400px; /* footer height + extra */
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* IE10 in Windows (Phone) 8
+    Fixes IE10 /11 issue with transparent toolbars making the feedback button (partially) disappear
+*/
+@-ms-viewport {
+    width: auto !important;
+}
+
+@media (max-width: 640px), (max-height: 500px) {
+    .sprintrFeedbackNode {
+        display: none;
+    }
+}
+
+.navbar-default {
+    background-color: #2d3e4e;
+    border: 0;
+    margin: 0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #E5E5E5;
+}
+
+.navbar-brand {
+    min-height: 70px;
+    padding: 25px 15px;
+}
+
+#mendix-logo-url {
+    white-space: nowrap;
+}
+
+.navbar-brand-img {
+    padding: 17px 15px;
+}
+.navbar-brand-img img {
+    display: inline-block;
+    margin-right: 7px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.navbar-default .navbar-nav>li {
+    padding: 20px 0;
+}
+.navbar-default .navbar-nav>li>a {
+    padding: 6px 10px 5px 10px;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #E5E5E5;
+}
+.navbar-default .navbar-nav>li>a.signup-btn{
+    padding: 6px 15px 5px 15px;
+    background: #76ca02;
+    margin: 0 10px 0 15px;
+    border-radius: 20px;
+}
+.navbar-default .navbar-nav>li>a.signup-btn:hover, .navbar-default .navbar-nav>li>a.signup-btn:focus {
+    background: #ff9e00;
+}
+
+.navbar-default .navbar-nav>li>a.login-btn {
+    padding: 4px 15px 3px 15px;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255, 0.10);
+    text-transform: capitalize;
+}
+.navbar-default .navbar-nav>li>a.login-btn:hover, .navbar-default .navbar-nav>li>a.login-btn:focus {
+    background: #FFF;
+    color: #231f20;
+}
+
+.navbar-toggle {
+    margin-top: 18px;
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+    background-color: rgba(0,0,0,0.20);
+}
+
+.nav li:hover ul.sub-menu {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.nav li ul.sub-menu {
+    position: absolute;
+    left: 0;
+    top: 82px;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    padding: 29px 28px 11px 28px;
+    border-top: 1px solid #425260;
+    background: #f0f0ee;
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -o-transition: 300ms ease;
+    transition: 300ms ease;
+}
+@media (max-width: 700px) {
+    .nav li ul.sub-menu {
+        position: relative;
+        display: block;
+        top: 0;
+        float: none;
+        padding: 0;
+        margin-left: 10px;
+        border: none;
+        visibility: visible;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        background: transparent;
+    }
+    .nav li ul.sub-menu li {
+        margin-bottom: 10px;
+    }
+    .nav li ul.sub-menu li a {
+        color: #FFF;
+        padding-left: 40px;
+        color: #ddd;
+        font-size: 13px;
+        font-weight: normal;
+        background: none !important;
+    }
+}
+.nav .sub-menu li {
+    display: block;
+    margin-bottom: 16px;
+}
+.nav .sub-menu li a {
+    display: block;
+    padding: 0 0 0 20px;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #1b82ba;
+    font-weight: 600;
+    line-height: 19px;
+    text-transform: uppercase;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.nav .sub-menu li a#navFAQs { background: transparent url(../img/nav/nav-faqs.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navHowTos { background: transparent url(../img/nav/nav-how-tos.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navReferenceGuide { background: transparent url(../img/nav/nav-reference-guide.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navAPIs { background: transparent url(../img/nav/nav-apis.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navReleaseNotes { background: transparent url(../img/nav/nav-release-notes.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navDeveloperTools { background: transparent url(../img/nav/nav-developer-tools.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navGetStarted { background: transparent url(../img/nav/nav-get-started.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navVideoTutorials { background: transparent url(../img/nav/nav-video-tutorials.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navClassroomCourses { background: transparent url(../img/nav/nav-classroom-courses.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navIntroductionCourse { background: transparent url(../img/nav/nav-introduction-course.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navOnDemandWebinars { background: transparent url(../img/nav/nav-webinars.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navCertification { background: transparent url(../img/nav/nav-certification.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navJobs { background: transparent url(../img/nav/nav-jobs.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navForum { background: transparent url(../img/nav/nav-forum.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navModelShare { background: transparent url(../img/nav/nav-model-share.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navAppStore { background: transparent url(../img/nav/nav-app-store.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navBlog { background: transparent url(../img/nav/nav-blog.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navEvents { background: transparent url(../img/nav/nav-events.png) 0 0 no-repeat; }
+.nav .sub-menu li a#navSupportOverview { background: transparent url(../img/nav/nav-support-overview.png) 0 0 no-repeat; }
+.nav .sub-menu li a:hover, 
+.nav .sub-menu li a:focus {
+    color: #23a7e8 !important;
+    background-position: 0 -20px !important;
+}
+
+.pagehead {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    background-color: #f1f1f1;
+}
+
+.pagehead h1 {
+    font-size: 20px;
+}
+
+.breadcrumbs {
+    padding-top: 10px;
+}
+.breadcrumbs a {
+    font-size: 12px;
+}
+
+.avatar {
+    float: left;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+.title-bar-overview .avatar {
+    margin-top: -5px;
+}
+
+
+.title-wrapper, .timestamp-wrapper {
+    margin-left: 60px;
+}
+
+.title-wrapper {
+    color: #1a81b4;
+}
+.title-wrapper h5 {
+    font-size: 16px;
+
+}
+.title-wrapper h5, .title-wrapper h1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.title-wrapper h1 {
+    margin-top: 10px;
+}
+
+.timestamp-wrapper {
+    color: #999999;
+}
+
+.mx-mf-visualiser-wrapper {
+    border: 1px solid #e5e5e5;
+}
+
+/*
+    Microflow viewport on the overview pages
+    in the overview, the origin of the table is shifted, so make sure it doesn't have dimension to avoid cropping
+*/
+.mx-mf-visualiser-wrapper-overview {
+    overflow:hidden;
+    height: 250px;
+}
+.mx-mf-visualiser-wrapper-overview .mx-mf-visualiser-viewport-contents {
+    overflow: visible;
+}
+
+.mx-mf-visualiser-wrapper-overview:hover,
+.mx-mf-visualiser-wrapper-overview:focus {
+    border-color: #337ab7;
+}
+.mx-mf-visualiser-wrapper-overview > .mx-mf-visualiser-wrapper-positioned {
+    position: relative;
+}
+
+.mx-mf-visualiser-wrapper-overview .mx-mf-visualiser-viewport .mx-mf-details-sidebar {
+    display:none;
+}
+
+/*
+    Microflow viewport on the view page
+*/
+.mx-modelshare-view-page .mx-mf-visualiser-viewport,
+.mx-modelshare-view-page .mx-mf-visualiser-viewport-contents {
+    height: 450px;
+}
+
+/*
+    Microflow viewport on the embed page
+*/
+body.mx-modelshare-embed-page {
+    padding: 0;
+}
+
+.mx-modelshare-embed-page .mx-mf-visualiser-wrapper {
+    height:calc(100% - 41px);
+    width:100%;
+}
+
+/*
+    Other stuff
+*/
+
+.mx-mf-visualiser-title {
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    background-color: #efefef;
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+    color: #1a81b4;
+    font-weight: bold;
+    z-index: 4;
+}
+
+.mx-mf-visualiser-title h5 {
+    display: inline-block;
+    margin: 7px 0 0 0;
+}
+
+.icon-right {
+    padding-left: 10px;
+}
+
+.icon-left {
+    padding-right: 10px;
+}
+
+.input-wrapper {
+    margin-bottom: 20px;
+}
+
+.input-wrapper .linkedin span span:nth-child(2) {
+    margin-bottom: -5px !important;
+}
+
+.input-wrapper .input-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.input-group .linkedin {
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.copy-clipboard-wrapper {
+    margin-top: 10px;
+}
+
+.copy-confirmation {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.download-link {
+    display: block;
+    margin-top: 40px;
+}
+
+/* override Bootstrap: */
+.form-control[readonly] {
+    cursor: text;
+}
+
+/* copied from Bootstrap#.btn-success:hover: */
+.btn-hover {
+    background-color: #449d44;
+}
+
+/* override Bootstrap: */
+.tooltip.left .tooltip-inner {
+    text-align: left;
+}
+
+.mx-mf-visualiser-description {
+    margin-top: 40px;
+}
+
+.mx-mf-visualiser-description .mx-mf-visualiser-description-text {
+    border: none;
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+    font-size: 12px;
+    white-space: pre-wrap;
+}
+
+.mx-mf-visualiser-description .panel-title {
+    font-size: 14px;
+}
+
+.mx-mf-visualiser-title .mx-mf-btn-fullscreen {
+    float: right;
+}
+
+.mx-mf-visualiser-title-embed .mx-mf-btn-fullscreen {
+    margin-right: 5px;
+}
+
+/* ================== Overview Page =================== */
+
+.jumbotron {
+    margin-bottom: 0px;
+    color: #FFF;
+    background-color: #2d3e4e;
+    background-image: url(../img/home-jumbotron.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.jumbotron h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.jumbotron p {
+    font-size: 18px;
+}
+
+.border-right {
+    border-right: 1px solid #e5e5e5;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-left-0 {
+    padding-left: 0px;
+}
+
+.pagehead-overview {
+    padding: 10px;
+    margin-bottom: 0px;  
+}
+
+.title-bar-overview {
+    margin-bottom: 20px;
+}
+
+.share-wrapper {
+    margin-bottom: 40px;
+}
+
+/* reset to prevent all text in preview from becoming blue */
+.share-wrapper .share-click {
+    color: #333;
+}
+
+.right-pannel .nav-pills>li.active>a, .right-pannel .nav-pills>li.active>a:hover, .right-pannel .nav-pills>li.active>a:focus {
+    background-color: transparent;
+    color: #1a81b4;
+    border-left: 2px solid #1a81b4; 
+    border-radius: 0;
+}
+
+.right-pannel .nav-pills>li>a {
+    border-radius: 0;
+    border-left: 2px solid transparent;
+    font-size: 16px;
+    font-weight: bold;
+    color: #999;
+    padding: 12px 25px;
+}
+.right-pannel .nav-pills>li.active>a:hover, .right-pannel .nav-pills>li.active>a:focus {
+
+ }
+
+.right-pannel .nav>li>a:hover, .right-pannel .nav>li>a:focus {
+    background-color: transparent;
+    color: #231f20;
+}
+/* ================== 404 Page =================== */
+.error-page {
+    background-color: #1780b9;
+}
+.error-page .fish-img {
+    position: absolute;
+    bottom: 119px;
+    right: 300px;
+    width: auto;
+    height: 50%;
+}
+.error-page .header {
+    padding: 50px;
+}
+.error-page .header .header--header {
+    font-size: 46px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.error-page .header .header--text {
+    font-size: 16px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.error-page .header .header--btn {
+    padding: 4px 15px 3px 15px;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255, 0.10);
+    text-transform: uppercase;
+    color:#FFF;
+    font-weight: bold;
+}
+.error-page .header .header--btn:hover, .error-page .header .header--btn:focus {
+    background: #FFF;
+    color: #231f20;
+}
+
+/* ================== About Page =================== */
+.about-page .header {
+    padding: 40px 0;
+}
+.about-page .header .header--header {
+    font-size: 36px;
+    color: #0595db;
+    font-weight: bold;
+}
+.about-page .header .header--text {
+    font-size: 16px;
+    line-height: 30px;
+}
+.about-page .site-content section .container {
+    padding: 60px 0;
+    border-top: 1px solid #DDD;
+}
+.about-page .site-content section .row {
+    margin: 0;
+    text-align: center; /* To align everything in center (small screen)*/
+}
+.col-info {
+    display: inline-block; /* To align everything in center (small screen)*/
+    text-align: left; /* To align everything in center (small screen)*/
+}
+.col-info .col-info--header {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.col-info .col-info--subheader {
+    font-size: 16px;
+}
+.col-info .col-info--steps {
+    font-size: 16px;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+.col-info .col-info--steps .col-info--steps-step {
+    line-height: 31px;
+    margin: 15px 0;
+}
+.col-info .col-info--steps-step:before {
+    padding: 0px 10px 0;
+    border-radius: 50%;
+    background: #76ca02;
+    color: #FFF;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.col-info .col-info--steps-step.step1:before {
+    content: "1";
+}
+.col-info .col-info--steps-step.step2:before {
+    content: "2";
+}
+
+.col-img img {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    /* To align everything in middle when (big screen) */
+    .about-page section {
+    }
+    .about-page .row {
+        display: table-row;
+    }
+    .about-page .col-info,
+    .about-page .col-img {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+    }
+}
+
+
+/* ================== Footer=================== */
+.footer {
+    margin-top: 20px;
+    padding: 20px 0;
+    font-size: 13px;
+    background-color: #393939;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #a4a4a3;
+}
+.footer a {
+    color: #a4a4a3;
+    font-weight: 600;
+}
+.footer-social a {
+    float: right;
+    margin-left: 5px;
+    display: inline-block;
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+}
+.footer-social a.footer-social--google {
+    background: transparent url(../img/social-google.png) 0 0 no-repeat;
+}
+.footer-social a.footer-social--facebook {
+    background: transparent url(../img/social-facebook.png) 0 0 no-repeat;
+}
+.footer-social a.footer-social--linkedin {
+    background: transparent url(../img/social-linkedin.png) 0 0 no-repeat;
+}
+.footer-social a.footer-social--twitter {
+    background: transparent url(../img/social-twitter.png) 0 0 no-repeat;
+}
+.footer-social a.footer-social--github {
+    background: transparent url(../img/social-github.png) 0 0 no-repeat;
+}
+.footer-social a:hover {
+    background-position: 0 -36px;
+}
+@media (max-width: 400px) {
+.footer-social {
+    text-align: center;
+    padding: 40px 0 10px 0;
+    }
+    .footer-social a {
+        float: none;
+    }
+}
+.row-footer {
+    margin-bottom: 16px;
+    text-align: center;
+    min-height: 72px;
+}
+.footer-buttons {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #6b6b6b;
+}
+.footer .footer-btn {
+    display: inline-block;
+    padding: 3px 20px 3px 49px;
+    border-radius: 21px;
+    -moz-border-radius: 21px;
+    -webkit-border-radius: 21px;
+    height: 42px;
+    color: #fff;
+    vertical-align: top;
+    margin: 0 30px 10px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+}
+.footer .footer-btn:hover {
+    color: #fff;
+}
+.footer-btn.demo {
+    background: #ff9e00 url(../img/footer-icon-demo.png) 3px 3px no-repeat;
+}
+.footer-btn.start-free {
+    background: #76ca02 url(../img/footer-icon-start.png) 3px 3px no-repeat;
+}
+.footer-btn.contact {
+    background: #ff9e00 url(../img/footer-icon-contact.png) 3px 3px no-repeat;
+}
+.footer-btn.demo:hover, .footer-btn.contact:hover {
+    background-color: #76ca02;
+    color: #fff;
+}
+.footer-btn.start-free:hover {
+    background-color: #ff9e00;
+    color: #fff;
+}
+
+.container,
+.jumbotron .container {
+    max-width: 1100px;
+}
+
+@media (min-width: 768px){
+    body {
+        padding-top: 96px;
+    }
+    .navbar-default .container {
+        padding: 12px 0;
+        border-bottom: 1px solid #425260;
+    }
+    .jumbotron {
+        padding: 60px 0;
+    }
+}
+@media (max-width: 768px){
+    .navbar-brand-img  {
+        padding: 20px 15px;
+    }
+    .navbar-default .navbar-collapse {
+        border: 0;
+    }
+    .navbar-nav {
+        margin: 0 -15px;
+    }
+    .navbar-default .navbar-nav>li {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    .navbar-default .navbar-nav>li>a {
+        padding: 10px 20px !important;
+    }
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>li>a:focus {
+        background: rgba(0,0,0,0.20) !important;
+        color: #fff !important;
+    }
+    .navbar-default .navbar-nav>li>a.login-btn {
+        background: transparent;
+        border: 0;
+        text-transform: uppercase;
+        border-radius: 0;
+    }
+}
+
+.mx-modelshare-view-page .mx-mf-visualiser-viewport-contents,
+.mx-modelshare-overview-page .mx-mf-visualiser-viewport-contents {
+    background: none;
+}
+/**
+    Microflow elements
+*/
+
+.selected rect, .selected circle, .selected polygon {
+    stroke:#0000FF;
+    stroke-miterlimit:10;
+    stroke-width:3;
+}
+
+/* Counterweight against Bootstrap, that automatically makes all labels bold, and gives a margin-bottom */
+.mx-mf-visualiser label {
+    font-weight: normal;
+    margin: 0;
+    white-space: nowrap;
+    color: #333;
+}
+
+.mx-mf-start {
+    stroke:#000000;
+    stroke-miterlimit:10;
+}
+
+.mx-mf-end {
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:2;
+}
+
+.mx-mf-action {
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:1;
+}
+
+.mx-mf-exclusivesplit {
+    stroke:#000000;
+    stroke-miterlimit:10;
+}
+
+.mx-mf-inheritancesplit {
+    stroke:#000000;
+    stroke-miterlimit:10;
+}
+
+.mx-mf-exclusivemerge {
+    stroke:#000000;
+    stroke-miterlimit:10;
+}
+
+.mx-mf-parameter {
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:1;
+}
+
+.mx-mf-loop-parameter {
+    fill:#f5f5dc;
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:1;
+}
+
+.mx-mf-loop-parameter-image {
+    position: relative;
+    top: 7px;
+    left: -1px;
+}
+
+.mx-mf-loopedactivity {
+    stroke:#808080;
+    stroke-miterlimit:10;
+    stroke-width:1;
+}
+
+.mx-mf-annotation {
+    border-radius: 0;
+}
+
+.mx-mf-image-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+
+.item-border {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.item-wrapper-annotation {
+    display:table;
+    margin: auto;
+    height: 100px;
+    table-layout: fixed;
+    padding: 0px 5px 0px 5px;
+}
+
+.item-wrapper {
+    display:table;
+    margin: auto;
+    height: 100%;
+    table-layout: fixed;
+}
+
+.image-wrapper, .text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mx-mf-inheritancesplit .text-wrapper,
+.mx-mf-exclusivesplit .text-wrapper {
+    text-align: center;
+}
+.image-wrapper {
+    /*width: 28px;*/
+}
+.image-wrapper img {
+    margin: 0 2px 0 5px;
+}
+.image-changeaction-wrapper {
+    position: absolute;
+    top: -3px;
+    right: 2px;
+    padding-right: 8px;
+}
+.image-changeaction-wrapper img {
+    padding: 0;
+    margin: 0px;
+}
+.text-wrapper label {
+    word-break: break-all; /* For other browsers */
+    word-break: break-word; /* only recognized by Chrome and IE; Is prettier and more like the Native Modeler than break-all */
+    white-space: pre-wrap;
+    margin-right: 4px;
+    margin-top: 2px;
+    margin-left: 5px;
+    line-height: 12px;
+    color: #333;
+}
+
+.input-item-wrapper {
+    position: absolute;
+}
+
+.input-text-wrapper {
+    position: relative;
+    top: 35px;
+}
+
+.mx-mf-activity-wrapper {
+    position: absolute;
+}
+
+.mx-mf-activity-content-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mx-mf-activity-annotation-content-wrapper {
+    overflow: hidden;
+}
+
+.result-item-wrapper {
+    position: absolute;
+    padding-top: 3px;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+
+.result-type-wrapper {
+    font-size: 9.5px;
+    line-height: 10px;
+}
+
+.mx-mf-visualiser .result-type-wrapper label {
+    color: #1E78AF;
+}
+
+._jsPlumb_overlay {
+    z-index: 3;
+    border: 1px solid #333;
+    background: white;
+    padding: 0px 3px;
+    color: #333;
+    -moz-transform: translate(-50%, -50%); /* missing from jsPlumb; if not specified, breaks some very specific sub-versions of IE (tested in 10 and 11); Unable to pinpoint which exactly; don't care; IE sux */
+    -ms-transform: translate(-50%, -50%); /* missing from jsPlumb; if not specified, breaks some very specific sub-versions of IE (tested in 10 and 11); Unable to pinpoint which exactly; don't care; IE sux */
+}
+
+.mx-mf-error {
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:2;
+}
+
+.mx-mf-error-image {
+    position: relative;
+    top: 3px;
+    left: 1px;
+}
+
+.mx-mf-errorhandler {
+    z-index: 1;
+}
+
+.mx-mf-errorhandler circle {
+    stroke: black;
+    stroke-width: 1;
+}
+
+.mx-mf-break {
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:1;
+}
+
+.mx-mf-continue {
+    stroke:#000000;
+    stroke-miterlimit:10;
+    stroke-width:1;
+}
+
+.mx-mf-activity-wrapper svg {
+    position: relative;
+    left: -1px;
+    top: -1px;
+}
+
+/**
+    Basic layout stuff, these classes are reused / extended by modelshare
+*/
+
+.mx-mf-visualiser {
+    font-family: Verdana, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, Sans-Serif;
+    font-size: 11px;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.mx-mf-visualiser-viewport-contents {
+    overflow: auto;
+    margin: 0px;
+    background: #FFF url(../img/watermark-mendix.jpg) no-repeat 20px calc(100% - 40px);
+    background-size: 75px 22px;
+}
+
+.mx-mf-details-sidebar {
+    float: right;
+    margin: 0px;
+    overflow: auto;
+}
+
+.mx-mf-visualiser-invisible {
+    width: 0px; /* MWE: display:none will break the svg gradients */
+    height: 0px;
+    position: fixed; /* Fixes IE issue */
+}
+
+/**
+    Fullscreen layout stuff
+*/
+
+html.modelshare-fullscreen, .modelshare-fullscreen body {
+    height: 100%;
+    margin: 0px;
+}
+
+.modelshare-fullscreen .mx-mf-visualiser-viewport,
+.modelshare-fullscreen .mx-mf-visualiser-viewport-contents {
+    height: 100%;
+}
+
+/**
+    Sidebar stuff
+*/
+
+.mx-mf-details-sidebar {
+    height: 100%;
+    background-color: #eee;
+    width: 0;
+    overflow: auto;
+}
+
+.mx-mf-details-sidebar-contents {
+    width: 300px; /* sidebar width ,used by javascript*/
+    height: 100%;
+    overflow: auto;
+    border-left: 1px solid #e5e5e5;
+}
+.mx-mf-details-header {
+    position: relative;
+    padding: 0 15px 0 25px;
+}
+
+.mx-mf-visualiser-invisible {
+    width: 0; /* MWE: display none will break the svg gradients */
+}
+
+.mx-mf-details-title {
+    word-break: break-all; /* For other browsers */
+    word-break: break-word; /* only recognized by Chrome and IE; Is prettier and more like the Native Modeler than break-all */
+}
+
+.mx-mf-details-body {
+    font-size: 12px;
+}
+
+.mx-mf-details-body dl {
+    margin-bottom: 0;
+}
+
+.mx-mf-details-body dt {
+    padding-bottom: 3px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #ddd;
+    background: #E7E7E7;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.mx-mf-details-body dd {
+    padding: 0 10px 5px 10px;
+}
+
+.mx-mf-details-body dd h4 {
+    font-size: 12px;
+    color: #999;
+    margin: 0 0 3px 0;
+}
+
+.mx-mf-details-body dd p {
+    margin: 0;
+}
+
+.mx-mf-details-expression {
+    white-space: pre-wrap;
+    font-family: monospace;
+    word-break: break-all; /* For other browsers */
+    word-break: break-word; /* only recognized by Chrome and IE; Is prettier and more like the Native Modeler than break-all */
+}
+
+.mx-mf-visualiser-viewport .mx-mf-details-close {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    padding: 0;
+    border-style: none;
+    background: none;
+}
+.microflow-wrapper{
+    z-index: 2
+}
+.microflow-highlight-wrapper{
+    z-index: 1
+}
+.Resizer {
+    background:#c1c1c1 ;
+    opacity: 1;
+    z-index: 1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+
+    .Resizer:hover {
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+    .Resizer.horizontal {
+    height: 11px;
+    margin: -5px 0;
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    cursor: row-resize;
+    width: 100%;
+}
+.Resizer.horizontal.disabled{
+    height: 0px; 
+    margin: 0px 0; 
+    border-top: 0px; 
+    border-bottom: 0px; 
+}
+.Resizer.horizontal:hover {
+    border-top: 5px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.Resizer.vertical {
+    width: 11px;
+    margin: 0 -5px;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+    border-left: 5px solid rgba(0, 0, 0, 0.5);
+    border-right: 5px solid rgba(0, 0, 0, 0.5);
+}
+Resizer.disabled {
+    cursor: not-allowed;
+}
+Resizer.disabled:hover {
+    border-color: transparent;
+}
+.microflow-flow{
+    z-index: 3;
+}
+.microflow-label {
+    border: 1px solid #333;
+    background: white;
+    padding: 0px 3px;
+    color: #333;
+    -moz-transform: translate(-50%, -50%); /* missing from jsPlumb; if not specified, breaks some very specific sub-versions of IE (tested in 10 and 11); Unable to pinpoint which exactly; don't care; IE sux */
+    -ms-transform: translate(-50%, -50%); /* missing from jsPlumb; if not specified, breaks some very specific sub-versions of IE (tested in 10 and 11); Unable to pinpoint which exactly; don't care; IE sux */
+}
+.microflow-entity {
+    border: 1px solid #333;
+    background: white;
+    padding: 0px 3px;
+    color: #333;
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 3;
+    -moz-transform: translate(-50%, -50%); /* missing from jsPlumb; if not specified, breaks some very specific sub-versions of IE (tested in 10 and 11); Unable to pinpoint which exactly; don't care; IE sux */
+    -ms-transform: translate(-50%, -50%); /* missing from jsPlumb; if not specified, breaks some very specific sub-versions of IE (tested in 10 and 11); Unable to pinpoint which exactly; don't care; IE sux */
+}
+.feedback{
+    position: absolute;
+    top: 0px;
+}
+.sprintrFeedbackNodes {
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    vertical-align: bottom;
+    z-index: 9999;
+    height: 30px;
+    width: 105px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
+    -moz-box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
+    -webkit-box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
+    background: #1b3149 ;
+}
+.sprintrFeedbackMessage {
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    font-size: 14px;
+    background-color: #F9F9FA;
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.30);
+    padding: 20px 10px;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+}
+.sprintrFeedbackBtn {
+    -webkit-appearance: none;
+    border-radius: 20px;
+    border: 1px solid #0595DB;
+    background: #0595DB;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #FFF;
+}
+.sprintrFeedbackFormContent .sprintrFeedbackCheckboxInput {
+    width: auto;
+    margin-right: 8px;
+}
+.sprintrFeedbackFormBg, 
+.sprintrFeedbackContentWrapper {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.sprintrFeedbackContentWrapper {
+    padding-top: 100px;
+    text-align: center;
+}
+.sprintrFeedbackFormBg {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.sprintrFeedbackForm {
+    z-index: 10000;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: 100%;
+    background-color: #FFF;
+}
+.sprintrFeedbackFormContent {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 95%; /* fallback */
+    width: calc(100%);
+}
+.sprintrFeedbackFormContent form {
+    text-align: left;
+    padding: 10px 20px 10px 20px;
+    background-color: #d7d7d7;
+}
+.sprintrFeedbackContentTable {
+    width: 100%;
+	table-layout: fixed;
+}
+.sprintrFeedbackInput {
+    display: inline-block;
+    /* margin-bottom: 5px; */
+    width: 95% !important; /* fallback */
+    width: calc(100% - 8px) !important;
+    height: auto;
+    padding: 3px 5px;
+    font-size: 12px;
+    color: #555;
+    line-height: 18px;
+    border: 1px solid #d7d7d7;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+} 
+.sprintrFeedbackInput:focus {
+    outline: 0;
+    border-color: #0595db;
+}
+.sprintrFeedbackInput::-webkit-input-placeholder {
+   color: #888;
+}
+.sprintrFeedbackInput:-moz-placeholder { /* Firefox 18- */
+   color: #888;  
+}
+.sprintrFeedbackInput::-moz-placeholder {  /* Firefox 19+ */
+   color: #888;  
+}
+.sprintrFeedbackInput:-ms-input-placeholder {  
+   color: #888;  
+}
+input.sprintrFeedbackInput {
+    height: 25px; /* Needed for IE because of DocType */
+}
+.sprintrFeedbackTextInput {
+    height: 65px !important; /* every browser same height */
+    width: 95% !important; /* fallback */
+	width: calc(100% - 8px) !important;
+	resize: none;
+    margin-bottom: 0;
+}
+.sprintrFocusWrapper input.MxClient_Focus {
+    border-color: #7AB800 !important;
+}
+.sprintrFocusWrapper a.MxClient_Focus {
+    color: #7AB800 !important;
+}
+.sprintrFeedbackContentTable .MxClient_Focus {
+    background-color: white;
+    border: 1px solid #7AB800;
+}
+.sprintrFeedbackContentTable td {
+    padding: 0px 0px 5px 0px;
+    font-weight: bold;
+    color: #222;
+    font-size: 12px;
+}
+.form-group {
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #222;
+    font-size: 12px;
+}
+.form-group label {
+    padding-bottom: 5px;
+    display: block;
+}
+.sprintrFeedbackFormHeader {
+    padding: 0 20px 12px 20px;
+    border-bottom: 1px solid #d7d7d7;
+    color: #555;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left;
+    text-shadow: none;
+    background-color: lightslategrey;
+}
+.sprintrHelpText a {
+    color: #005DC4;
+}
+.sprintrFeedbackInputError {
+    border: 1px solid #ed1c24;
+}
+.sprintrFocusWrapperSubmit {
+    display: block;
+}
+.sprintrFeedbackSubmit {
+    -webkit-appearance: none;
+    text-align: center; 
+    font-size: 16px;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+    color: #FFF;
+    border: 1px solid #0595DB;
+    background: #0595DB !important;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.sprintrFeedbackSubmit:hover,
+.sprintrFeedbackSubmit:focus {
+    border-color: #0473a9;
+    background-color: #0473a9;
+} 
+.sprintrFeedbackCancel {
+    right: 20px;
+    font-weight: normal;
+    color: #555;
+    cursor: pointer;
+    position: absolute;
+    font-weight: normal;
+    top: 9px;
+    display: block;
+    font-size: 16px;
+}
+.sprintrFeedbackCancel img {
+    background-color: #EEE;
+    height: 18px;
+    padding: 5px;
+    border-radius: 2px;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.sprintrFeedbackCancel img:hover {
+    background-color: #d7d7d7;
+}
+
+.sprintrFeedbackFooterWrapper {
+    padding: 5px 0;
+}
+.sprintrHelpTextTrigger {
+    float: right;
+    font-size: 0.6em;
+    font-weight: normal;
+    text-decoration: underline;
+    text-shadow: none;
+    cursor: pointer;
+}
+.sprintrHelpText {
+    -moz-box-shadow: 1px 1px 2px 1px;
+    box-shadow: 1px 1px 2px 1px;
+    -webkit-box-shadow: 1px 1px 2px 1px;
+    background-color: #FDFFE0;
+    border: 1px solid black;
+    font-size: 0.8em;
+    margin: 8px;
+    margin-left: 0;
+    margin-right : 20px;
+    padding: 8px;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    position : fixed;
+    top: 5%;
+    z-index: 1000;
+}
+.sprintrHelpText a {
+    text-decoration : underline;
+}
+.sprintrFeedbackOptions {
+    overflow: hidden;
+}
+.sprintrFeedbackOptions div {
+    float: left;
+    position: relative;
+    margin-right: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #555;
+    font-weight: bold;
+    background-color: #EEE;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.sprintrFeedbackOptions .sprintrFeedbackActive {
+    color: #FFF;
+    background-color: #0595DB;
+}
+.sprintrFeedbackOptions div:hover {
+    background-color: #d7d7d7;
+}
+.sprintrFeedbackOptions .sprintrFeedbackActive:hover {
+    background-color: #0595DB;
+}
+.sprintrFeedbackOptions img {
+    display: none;
+}
+#addShotBar {
+    margin: 5px 0;
+    display: block;
+}
+#addShotBar #previewLabel {
+    color: #0595db;
+    margin-left: 20px;
+    position: relative;
+}
+#addShotBar #previewLabel:hover {
+    text-decoration: underline;
+}
+#formFormNode #addShotBar #previewLabel:before {
+    content: "-";
+    display: block;
+    position: absolute;
+    color: #000;
+    left: -15px;
+    top: 0;
+    text-decoration: none;
+}
+#formFormNode #addShotBar #previewLabel:hover:before {
+    text-decoration: none;
+}
+#helpButton{
+    position: absolute;
+    right:5px;
+    top:15px;
+    padding: 0px 0px;
+    background-color:#f5f5f5;
+    border:none
+}
+#helpButton:hover{
+    border: #ccc solid 1px
+}

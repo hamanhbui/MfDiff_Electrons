@@ -1,0 +1,9 @@
+node_modules
+typings
+*.js
+*.js.map 
+*.map
+app.js.map
+dist
+devIndex.html
+style.css

@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "Launch Extension",
+            "runtimeExecutable": "${workspaceRoot}/main.js",
+            "preLaunchTask": "tsc"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": false,
+        // "sourceMap": true,
+        "alwaysStrict": true,
+        "allowUnreachableCode": false,
+        "noUnusedLocals": true,
+        "jsx": "react",
+        "noUnusedParameters": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "experimentalDecorators": true
+    },
+    "dependencies": {
+        "mendixmodelsdk": "~2.0.0",
+        "mendixplatformsdk": "~2.0.0",
+        "when": "^3.7.3"
+    }
+}

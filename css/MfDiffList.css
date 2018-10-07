@@ -1,0 +1,497 @@
+* {
+    font-size: 11px
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee
+}
+
+.element-container {
+    width: 100%;
+    height: initial;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.group-container {
+    width: 98%;
+    position: relative;
+    margin: 10px 3px 15px;
+    /*font-size: 12px;*/
+    font-family: arial; 
+}
+.group-container .group-label {
+    position: absolute;
+    top: -7px;
+    left: 9px;
+    background: #f0f0f0;
+    padding-left: 2px;
+}
+.group-container .group-body {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px 3px 5px 0;
+    height: 100%;
+    width: 100%;
+}
+.pair-container {
+    margin-left: 3px;
+}
+.pair-container .text-container {
+    padding-left: 7px;
+}
+.group-container :hover {
+    cursor: default !important;
+}
+.text-container {
+    position: relative;
+    width: 100%;
+    padding: 3px 5px 3px 10px;
+    height: 27px;
+    display: flex;
+    justify-content: flex-start;
+}
+.text-label {
+    min-width:100px;
+    height: 23px;
+    display: inline-block;
+    line-height: 23px;
+}
+.text-value {
+    width: 100%;
+}
+.array-container {
+    padding: 0 5px 5px;
+    width: 98.5%;
+    margin-top: 5px;
+}
+.array-container-named{
+    padding: 0;
+    margin: 0;
+}
+.array-container .array-toolbar {
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ccccc1));
+    border-bottom: 1px solid #999;
+    border-radius: 5px;
+    width: 102%;
+    height: 25px;
+}
+.array-container .array-table-area {
+    width: 102%;
+    background: #ababab;
+    min-height: 115px;
+    border: 1px solid #ababab;
+}
+.array-table-area .table-heading{
+    background: white;
+    height: 23px;
+    border-bottom: 1px solid #ababab;
+    border-right: 1px solid #ebebeb;
+    display: inline-block;
+    line-height: 23px;
+    padding-left: 7px;
+}
+.array-table-area .table-data {
+    background: #f0f0f0;
+    height: 23px;
+    line-height: 23px;
+    padding-left: 3px;
+    border-right: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+    display: inline-block;
+}
+.element-container .mx-mf-details-sidebar-contents {
+    width: 100%;
+}
+.element-container .mx-mf-details-header {
+    padding: 5px 2.5px 5px 2.5px;
+    border-top-style: inset;
+    border-top-width: 1px;
+    cursor: pointer;
+}
+.element-container .chip {
+    border-radius: 16px;
+    border: 0;
+    font-size: 13px;
+    line-height: 32px;
+    width: 48px;
+    background-color: #E7E7E7;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.element-container .mx-mf-details-title {
+    display: inline
+}
+.element-container b {
+    position: absolute;
+    padding: 7px 15px 
+}
+.pair-attribute-array table {
+    width: 100%
+}
+.pair-attribute-array table tr {
+    border: 1px solid dimgray
+}
+.diff-container dt {
+    width: 100%
+}
+.well::-webkit-scrollbar {
+    display: none
+}
+.well {
+    padding: 2px 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.well .group-input {
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    height: 90%;
+    vertical-align: middle !important;
+    display: inline-block;
+}
+.well label {
+    vertical-align: middle;
+    text-align: right;
+    padding: 0;
+    line-height: 23px;
+    margin: 0;
+    font-weight: normal;
+    font-family: verdana;
+}
+.well .input {
+    width: 130px;
+    height: 23px;
+    /*margin: 0px px 0 4px;*/
+    /*font-size: 12px;*/
+    font-family: verdana;
+}
+.well .play-button {
+    width: 49px;
+    position: absolute;
+    right: 0;
+    height: 23px;
+    padding: 3px;
+}
+.well td {
+    padding: 3px 5px 0px 0px
+}
+.well table {
+    display: inline-table
+}
+.Select {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0px 0 0 0;
+    position: absolute;
+}
+.Select-control {
+    border-radius: 0px;
+    height: 100%;
+    display: inline-block;
+    font-size: inherit!important;
+    font-family: verdana!important;
+    line-height: 23px!important;
+}
+.Select-arrow-zone {
+    display: inline-block;
+    position:  absolute;
+    right: 0px;
+    padding: 0px;
+    background: #ddd;
+    border-left: 1px solid #ccc;
+    padding: 0 0 0 1px;
+}
+.Select-multi-value-wrapper {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+table .Select-wrapper {
+    vertical-align: bottom;
+    margin-right: 0
+}
+.Select-wrapper {
+    vertical-align: middle;
+    position: relative;
+    width: 135px;
+    display: inline-block;
+    height: 23px;
+    margin: 0;
+    /*top: 8px;*/
+    margin: 0 10px 0 2px    
+}
+.Select-input  {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-left: 2px;
+    margin: 0;
+}
+.Select-input  > input {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.Select-clear-zone {
+    display: none
+}
+.Select-option-value, .Select-placeholder{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-left: 2px;
+    line-height: 23px;
+}
+.Select-option-value:focus {
+    background: "red"
+}
+.Select-menu-outer {
+    width: 300px;
+    z-index: 10;
+    border-radius: 0px;
+    overflow-x: hidden;
+}
+.Select-spinner {
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    font-size: 11px;
+}
+.well .load-button {
+    width: 50px;
+    height: 23px;
+    vertical-align: middle;
+    margin: 0px 10px 0px 1px;
+    padding: 0px;
+    border-radius: 0px;
+    background: darkgray;
+    color: white;
+}
+.well .load-button:hover {
+    background: white;
+    color: darkgray;
+}
+.popup {
+    position: fixed !important;
+    border: 1px solid darkslategray;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+}
+/*.well .dropdown {
+    font-size: 12px; 
+    font-family: verdana; 
+    height: 25px;
+    padding: 1px 2px 1px 2px;
+    border-radius: 0px;
+    margin: 0px 3px 4px -2px;
+}*/
+.dropdown-element {
+    display: flex;
+    /*font-size: 12px;*/
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+    margin: 0;
+    width: 260px;
+    position: relative;
+}
+.dropdown-element .number {
+    height: 100%;
+    width: 40px;
+    border-right: 1px solid rgb(204, 204, 204);
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    padding: 8px 0 0 4px;
+    font-family:  Verdana, Geneva, sans-serif
+}
+.dropdown-element .content {
+    display: inline-block;
+    position: absolute;
+    padding: 7px 10px 2px 10px;
+    left: 40px;
+    width: 250px;
+}
+.dropdown-element:hover {
+    background-color: #efefef;
+    cursor: pointer;
+}
+.dropdown-list {
+    max-height: 250px;
+    overflow: auto;
+    /*font-size: 12px;*/
+}
+.dropdown-spinner {
+    position: absolute;
+    z-index: 10;
+    top: 11px;
+    left: 12px;
+    display: inline-block;
+    width: 22px;
+}
+.dropdown-item-spinner {
+    width: 20px;
+    /*font-size: 12px;*/
+    margin: auto;
+    top: 25px;
+    left: 0px;
+}
+.dropdown-input {
+    width: 120px !important; 
+    margin: 0px 0px 0px 2px !important;
+    border: 1px solid #ccc;
+    border-right-width: 0;
+}
+.checkbox {
+    border: 1px solid #D6DADC;
+    background: white;
+    border-radius: 0px;
+    box-shadow: 1px 2px 3px #efefef;
+    display: inline-block;
+    margin: 0;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+.checked {
+    background: #f5f5f5;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.checkbox-wrapper {
+    display: inline-block;
+    position: relative;
+}
+.checkbox-tick {
+    z-index: 2;
+    font-size: 16px;
+    font-weight: bold;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    color: #999;
+}
+.checkbox-label {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px 0 3px;
+}
+.popup-item {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #bbb;
+    line-height: 50px;
+    padding-left: 5px;
+    position: relative;
+    top: 0;
+    left: 0;    
+}
+
+.popup-item:hover {
+    background: #efefef !important;
+    cursor: pointer !important;
+}
+
+.well-input:focus, .load-button:focus {
+    outline: none;
+    border: 1px solid #007eff;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+}
+.popup-item .state {
+    float: right;
+    padding-right: 5px;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+.popup-list:focus {
+    outline: none;
+}
+.react-autosuggest__container {
+  position: relative;
+  height: 100%
+}
+
+.react-autosuggest__input {
+    width: 240px;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    border: 1px solid #aaa;
+        /*position: absolute;
+    top: -6px;*/
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left:3px;
+  width: 300px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
