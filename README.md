@@ -1,7 +1,7 @@
 # MfDiff_Electrons
 This is code for "Application to compare 2 revisions of Mendix including Microflow and DomainModel"  by using ReactJS.
 
-# Overview
+### Overview
 
 This is the code for [this](https://appstore.home.mendix.com/link/app/60761/SCH/Mendix-DiffTool) application on Mendix Appstore by using ReactJS.
 
@@ -9,7 +9,7 @@ This is the code for [this](https://appstore.home.mendix.com/link/app/60761/SCH/
 
 ![Image](images/capture.png)
 
-# Description
+### Description
 
 Utility to compare 2 revisions of Mendix including Microflow and DomainModel.
 Utility to compare 2 revisions of Mendix. The tool is designed to compare all aspect of Mendix:
@@ -24,7 +24,7 @@ Utility to compare 2 revisions of Mendix. The tool is designed to compare all as
 
  - Widget configuration
 
-# Typical usage scenario
+### Typical usage scenario
 
  - Track changes of previous commits to find bugs
 
@@ -32,7 +32,7 @@ Utility to compare 2 revisions of Mendix. The tool is designed to compare all as
 
  - To revert some simple changes from previous commits
 
-# Feature and limitations
+### Feature and limitations
 
  - Have precise  comparison: Properties of microflow action, properties of microflow
  - Have Intuitive interaction to navigate the changes:
@@ -43,5 +43,5 @@ Utility to compare 2 revisions of Mendix. The tool is designed to compare all as
      - Hide/show the similar information
      - Hide/show side or position difference
 
-# Dependencies
+### Dependencies
  - Mendix user and ApiKey. Get one at: https://docs.mendix.com/apidocs-mxsdk/apidocs/authentication
